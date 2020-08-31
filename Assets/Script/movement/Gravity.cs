@@ -37,6 +37,16 @@ public class Gravity : MonoBehaviour
             Vector3 direction = rb.position - rbToAttract.position;
             float distance = direction.magnitude;
 
+            // if(distance < 60 )
+            // {
+            //     Time.timeScale = 1/Mathf.Log(distance)+ 0.3f;
+            //     Debug.Log("slow slow");
+            // }
+            // else
+            // Time.timeScale =1f;
+            
+
+
             float forceMagnitude = (rb.mass*rbToAttract.mass)/Mathf.Pow(distance,2);
 
             Vector3 force= G *direction.normalized * forceMagnitude;
