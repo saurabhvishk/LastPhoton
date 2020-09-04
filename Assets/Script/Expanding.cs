@@ -32,7 +32,7 @@ public class Expanding  : MonoBehaviour
             
         }
 
-        if(this.transform.localScale.x >= 100000f)
+        if(this.transform.localScale.x >= 8000f)
         {
             Destroy(this.gameObject);
         }
