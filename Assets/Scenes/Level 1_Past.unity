@@ -462,7 +462,6 @@ GameObject:
   - component: {fileID: 1594821737}
   - component: {fileID: 1594821736}
   - component: {fileID: 1594821735}
-  - component: {fileID: 1594821738}
   - component: {fileID: 1594821739}
   m_Layer: 0
   m_Name: Main Camera
@@ -536,21 +535,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594821738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594821734}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c378cd11cb2894b87a3f519ddba2ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 38008298}
-  smoothSpeed: 0.125
-  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1594821739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,6 +550,7 @@ MonoBehaviour:
   spawnPos: {fileID: 38008298}
   spawnObj: {fileID: 2125721268509008714, guid: 2a781f267400c5e4d9479e14a472ff02,
     type: 3}
+  narrationControler: {fileID: 1662769105}
 --- !u!1 &1662769105
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,3 +667,5 @@ MonoBehaviour:
   text1: {fileID: 139282609}
   text2: {fileID: 905198346}
   smooth: 1
+  isZooming: 0
+  lastSpawn: {fileID: 1594821734}

@@ -9,34 +9,30 @@ public class NarrationController : MonoBehaviour
     public Text text1;
     public Text text2;
     public float smooth= 5f;
-    bool isZooming= false;
+    public bool isZooming= false;
+    public GameObject lastSpawn;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         Invoke("Texton",2); 
+        
+        
     }
-
     // Update is called once per frame
     void Update()
     {  
         if (isZooming)
         {
             Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 50f, Time.deltaTime*smooth);
-            if(Camera.main.orthographicSize== 0f)
+            if(Camera.main.orthographicSize== 50f)
             Time.timeScale = 0f;
         }
       
     }
 
-    IEnumerator slowdown()
-    {
-
-        yield return new WaitForSeconds(5f);
-        
-
-    }
     void Texton()
     {
         text1.enabled = true;
@@ -58,6 +54,9 @@ public class NarrationController : MonoBehaviour
     {   
         text2.enabled = false;
         isZooming= true;
+        lastSpawn.GetComponent<spawn>().UniversePop();
+       
+    
         
         
     }
