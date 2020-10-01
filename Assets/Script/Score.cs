@@ -11,6 +11,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   timer= timer + Time.deltaTime;
-        score.text= timer.ToString();
+        score.text= timer.ToString("#.00");
     }
 }
