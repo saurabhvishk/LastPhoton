@@ -34,7 +34,15 @@ public class Gravity : MonoBehaviour
         void Attract(Gravity objToAttract)
         {
             Rigidbody2D rbToAttract = objToAttract.rb;
-            Vector3 direction = rb.position - rbToAttract.position;
+            Vector3 direction;
+            if(objToAttract.tag == "StarBirth" || this.tag == "StarBirth")
+            {
+                direction = -(rb.position -rbToAttract.position);
+            }
+            else
+            {
+                direction = rb.position - rbToAttract.position;
+            }
             float distance = direction.magnitude;
 
             // if(distance < 60 )

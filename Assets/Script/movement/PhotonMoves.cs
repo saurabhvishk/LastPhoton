@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class PhotonMoves : MonoBehaviour
-{
+{   
+    public static PhotonMoves isntance;
     [SerializeField]
     [Range(0,100)]
-    private float speed = 15f;
+    public float speed = 15f;
     private Vector3 targetPosition;
     private float boostTimer =0f;
     private bool isBoosting =false;
@@ -18,6 +19,8 @@ public class PhotonMoves : MonoBehaviour
     void Start()
     {
         rb =this.GetComponent<Rigidbody2D>(); 
+        if(isntance == null)
+            isntance = this;
         
     }
 
